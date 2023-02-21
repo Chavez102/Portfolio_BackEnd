@@ -4,8 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                
                 echo 'Building...'
-                sh 'sh ./Portfolio_BackEnd/mvnw clean package -DskipTests'
+                
+                dir("Portfolio_BackEnd") {
+                    sh "pwd"
+                    sh 'sh ./mvnw clean package -DskipTests'
+                }
+                
             }
         }
         stage('Test') {
