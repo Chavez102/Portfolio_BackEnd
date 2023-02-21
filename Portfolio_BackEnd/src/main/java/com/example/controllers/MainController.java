@@ -16,7 +16,7 @@ public class MainController {
 	@GetMapping("/home")
 	public ResponseEntity<Response> hello(){ 
 		
-		Response myresponse=new Response("Comming from backend");
+		Response myresponse=new Response("ACCEPTING CHANGES FROM BACK");
 		
 		
 		
