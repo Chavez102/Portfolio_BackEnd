@@ -22,7 +22,7 @@ pipeline {
 
                     // sh "ls"
                     // sh 'npm install'
-                    sh 'npm ci'
+                    sh 'npm install --timeout 300000'
                     sh "ls"
 
                     sh 'ng build --configuration production'
