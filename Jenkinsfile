@@ -12,6 +12,25 @@ pipeline {
 
                 git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
                 sh "ls"
+
+
+                dir("Portfolio_FrontEnd/Portfolio") {
+                    sh "pwd"
+
+                    sh 'ng build --configuration production'
+                }
+
+                sh "pwd"
+                sh "ls"
+
+                sh 'rm -r Portfolio_BackEnd/src/main/resources/public'
+
+                dir("Portfolio_FrontEnd/Portfolio") {
+                    sh "pwd"
+                    sh "ls"
+
+                    // sh 'cp -R dist/portfolio ~/Documents/Repos/Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
+                }
              
                 
             }
