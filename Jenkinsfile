@@ -21,7 +21,8 @@ pipeline {
                     sh "npm --version"
 
                     // sh "ls"
-                    // sh 'npm install'
+                    sh 'npm cache clear --force'
+
                     sh 'npm install --verbose --fetch-timeout=30000'
                     sh "ls"
 
