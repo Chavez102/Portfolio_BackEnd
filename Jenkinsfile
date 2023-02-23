@@ -20,9 +20,9 @@ pipeline {
                     sh "pwd"
                     sh "npm --version"
 
-                    sh "ls"
+                    // sh "ls"
                     // sh 'npm install'
-                    sh 'npm install --fetch-timeout=100000'
+                    sh 'npm install --verbose --fetch-timeout=30000'
                     sh "ls"
 
                     sh 'ng build --configuration production'
