@@ -13,10 +13,11 @@ pipeline {
                 sh "pwd"
 
                 git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
-                sh "ls"
 
 
-                dir("Portfolio_FrontEnd/Portfolio") {
+                echo 'After clonning FrontEnd...'
+                sh "ls" 
+                dir("Portfolio") {
                     sh "pwd"
                     sh "npm --version"
 
