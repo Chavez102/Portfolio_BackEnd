@@ -17,6 +17,7 @@ public class MainController {
 	public ResponseEntity<Response> hello(){ 
 		
 		Response myresponse=new Response("ACCEPTING CHANGES FROM BACK");
+		System.out.println("GET REQUEST");
 		
 		
 		

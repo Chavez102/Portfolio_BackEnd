@@ -2,6 +2,21 @@ pipeline {
     agent any
 
     stages {
+         stage('Clone FrontEnd') {
+            steps {
+                
+                echo 'Clonning...'
+                
+             
+                sh "pwd"
+
+                git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
+                sh "ls"
+             
+                
+            }
+        }
+
         stage('Build') {
             steps {
                 
@@ -9,6 +24,7 @@ pipeline {
                 
                 dir("Portfolio_BackEnd") {
                     sh "pwd"
+
                     sh 'sh ./mvnw clean package -DskipTests'
                 }
                 

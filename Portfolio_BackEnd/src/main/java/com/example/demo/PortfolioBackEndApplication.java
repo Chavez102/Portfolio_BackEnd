@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class PortfolioBackEndApplication {
 
 	public static void main(String[] args) {
-		System.out.println("GETS HEREfd");
+		System.out.println("GETS HEREfdlllllllll");
 		SpringApplication.run(PortfolioBackEndApplication.class, args);
 	}
 
