@@ -9,8 +9,7 @@ pipeline {
                 
                 echo 'Clonning...'
                 
-             
-                sh "pwd"
+              
 
                 git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
 
@@ -21,8 +20,8 @@ pipeline {
                     sh "pwd"
                     sh "npm --version"
 
-                    sh "ls"
-                    sh 'npm install'
+                    // sh "ls"
+                    // sh 'npm install'
                     sh "ls"
 
                     sh 'ng build --configuration production'
