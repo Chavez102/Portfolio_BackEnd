@@ -17,6 +17,8 @@ pipeline {
                 dir("Portfolio_FrontEnd/Portfolio") {
                     sh "pwd"
 
+                    sh "ng version"
+
                     sh 'ng build --configuration production'
                 }
 
