@@ -22,6 +22,7 @@ pipeline {
 
                     // sh "ls"
                     // sh 'npm install'
+                    sh 'npm ci'
                     sh "ls"
 
                     sh 'ng build --configuration production'
