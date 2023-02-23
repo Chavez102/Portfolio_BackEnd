@@ -29,7 +29,15 @@ pipeline {
                     sh "pwd"
                     sh "ls"
 
-                    // sh 'cp -R dist/portfolio ~/Documents/Repos/Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
+                    sh 'cp -R dist/portfolio /var/lib/jenkins/workspace/BackEnd_Pipeline/Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
+                }
+
+
+                dir("Portfolio_BackEnd") {
+                    sh "pwd"
+                    sh "ls"
+
+                    sh 'mv Portfolio_BackEnd/src/main/resources/portfolio/ Portfolio_BackEnd/src/main/resources/public'
                 }
              
                 
