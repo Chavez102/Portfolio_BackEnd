@@ -19,7 +19,10 @@ pipeline {
                 dir("Portfolio_FrontEnd/Portfolio") {
                     sh "pwd"
                     sh "npm --version"
-                    
+
+                    sh "ls"
+                    sh 'npm install'
+                    sh "ls"
 
                     sh 'ng build --configuration production'
                 }
