@@ -16,7 +16,9 @@ pipeline {
                 
 
                 sh "if [ -d Portfolio ]; then rm -Rf Portfolio; fi"
+                sh "if [ -d Portfolio@tmp ]; then rm -Rf Portfolio@tmp; fi"
                 sh "if [ -d Portfolio_FrontEnd ]; then rm -Rf Portfolio_FrontEnd; fi"
+               
 
 
                 
@@ -43,6 +45,7 @@ pipeline {
                     sh 'ng version'
 
                     // sh 'npm update --verbose'
+                     sh 'ng build --verbose'
 
                     sh 'ng build --verbose --configuration production'
                 }
