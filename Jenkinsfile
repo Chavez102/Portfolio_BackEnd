@@ -41,6 +41,7 @@ pipeline {
                     sh "ls"
 
                     nodejs('nodejs'){
+                        sh 'npm cache clear --force'
                         sh 'npm install --verbose'
                     }
                     
