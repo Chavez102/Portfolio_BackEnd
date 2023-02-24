@@ -23,7 +23,7 @@ pipeline {
                     // sh "ls"
                     sh 'npm cache clear --force'
 
-                    sh 'npm install --verbose --fetch-timeout=30000'
+                    sh 'npm install --verbose'
                     sh "ls"
 
                     sh 'ng build --configuration production'
