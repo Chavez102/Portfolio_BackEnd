@@ -13,8 +13,8 @@ pipeline {
                 sh "ls" 
 
                 sh "rm -r Portfolio" 
-                sh "rm -r Portfolio_BackEnd" 
-                sh "rm -r Portfolio_BackEnd@tmp" 
+                sh "rm -r Portfolio_FrontEnd" 
+                
                 echo 'Before Clonning...'
                 sh "ls" 
 
