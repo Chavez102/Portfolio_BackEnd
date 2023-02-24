@@ -26,6 +26,8 @@ pipeline {
                     sh 'npm install --verbose'
                     sh "ls"
 
+                    sh 'ng version'
+
                     sh 'ng build --configuration production'
                 }
 
