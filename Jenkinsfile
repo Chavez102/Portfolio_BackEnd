@@ -28,7 +28,7 @@ pipeline {
 
                     sh 'ng version'
 
-                    sh 'npm audit fix'
+                    sh 'npm update'
 
                     sh 'ng build --configuration production'
                 }
