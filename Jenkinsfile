@@ -13,7 +13,10 @@ pipeline {
                 sh "ls" 
 
                 sh "rm -r Portfolio" 
+                sh "rm -r Portfolio_BackEnd" 
+                sh "rm -r Portfolio_BackEnd@tmp" 
                 echo 'Before Clonning...'
+                sh "ls" 
 
                 git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
 
