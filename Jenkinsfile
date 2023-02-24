@@ -12,8 +12,13 @@ pipeline {
               
                 sh "ls" 
 
-                // sh "rm -r Portfolio" 
-                // sh "rm -r Portfolio_FrontEnd" 
+            
+                
+
+                sh "if [ -d Portfolio ]; then rm -Rf Portfolio; fi"
+                sh "if [ -d Portfolio_FrontEnd ]; then rm -Rf Portfolio_FrontEnd; fi"
+
+
                 
                 echo 'Before Clonning...'
                 sh "ls" 
@@ -22,6 +27,7 @@ pipeline {
 
 
                 echo 'After clonning FrontEnd...'
+                sh "pwd" 
                 sh "ls" 
                 dir("Portfolio") {
                     sh "pwd"
