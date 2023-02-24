@@ -34,10 +34,10 @@ pipeline {
                     sh "npm --version"
 
                     // sh "ls"
-                    // sh 'npm cache clear --force'
+                    sh 'npm cache clear --force'
 
                     sh "ls"
-                    sh 'npm install'
+                    sh 'npm install --verbose'
                     sh "ls"
 
                     sh 'ng version'
@@ -61,7 +61,7 @@ pipeline {
 
 
 
-
+                
 
                 sh "pwd"
                 sh "ls"
