@@ -36,18 +36,33 @@ pipeline {
                     sh "npm --version"
 
                     // sh "ls"
-                    sh 'npm cache clear --force'
+                    // sh 'npm cache clear --force'
 
                     sh "ls"
-                    sh 'npm install --verbose'
+
+                    nodejs('nodejs'){
+                        sh 'npm install --verbose'
+                    }
+                    
+
+
+
+
+
                     sh "ls"
 
                     sh 'ng version'
 
                     // sh 'npm update --verbose'
-                     sh 'ng build --verbose'
 
-                    sh 'ng build --verbose --configuration production'
+                    nodejs('nodejs'){
+                         sh 'npm run build --verbose'
+                    }
+
+                    
+                    
+
+                    // sh 'ng build --verbose --configuration production'
                 }
 
 
