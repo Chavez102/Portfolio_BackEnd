@@ -33,7 +33,7 @@ pipeline {
                 sh "ls" 
                 dir("Portfolio") {
                     sh "pwd"
-                    sh "npm --version"
+                    
 
                     // sh "ls"
                     // sh 'npm cache clear --force'
@@ -51,7 +51,7 @@ pipeline {
 
                     sh "ls"
 
-                    sh 'ng version'
+                    
 
                     // sh 'npm update --verbose'
 
