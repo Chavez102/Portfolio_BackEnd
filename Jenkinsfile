@@ -28,9 +28,9 @@ pipeline {
 
                     sh 'ng version'
 
-                    sh 'npm update --verbose'
+                    // sh 'npm update --verbose'
 
-                    sh 'ng build --configuration production'
+                    sh 'ng build --verbose --configuration production'
                 }
 
                 sh "pwd"
