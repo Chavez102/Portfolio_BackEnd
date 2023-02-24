@@ -23,6 +23,7 @@ pipeline {
                     // sh "ls"
                     sh 'npm cache clear --force'
 
+                    sh "ls"
                     sh 'npm install --verbose'
                     sh "ls"
 
