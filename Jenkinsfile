@@ -23,9 +23,14 @@ pipeline {
 
                 
                 echo 'Before Clonning...'
+
+
+                dir("Portfolio_BackEnd") {
+                    
+                    git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
+                }
               
 
-                git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git', dir: 'Portfolio_FrontEnd'
 
                 
 
