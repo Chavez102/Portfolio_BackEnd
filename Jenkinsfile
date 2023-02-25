@@ -79,7 +79,10 @@ pipeline {
                 sh "pwd"
                 sh "ls"
 
+                sh "if [ -d Portfolio_BackEnd/src/main/resources/public ]; then rm -Rf Portfolio_BackEnd/src/main/resources/public; fi"
+
                 sh 'mv Portfolio_BackEnd/src/main/resources/portfolio Portfolio_BackEnd/src/main/resources/public'
+                    
                 
              
                 
