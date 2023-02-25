@@ -37,11 +37,11 @@ pipeline {
 
                     // sh "ls"
                     // sh 'npm cache clear --force'
-
+                    sh "pwd"
                     sh "ls"
 
                     nodejs('nodejs'){ 
-                        sh 'npm install --verbose'
+                        sh 'npm install '
                     }
                     
  
