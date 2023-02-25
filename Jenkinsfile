@@ -25,9 +25,9 @@ pipeline {
                 echo 'Before Clonning...'
               
 
-                git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
+                git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git', dir: 'Portfolio_FrontEnd'
 
-                 git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_BackEnd.git'
+                
 
 
                 echo 'After clonning FrontEnd...'
