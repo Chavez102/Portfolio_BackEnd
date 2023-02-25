@@ -18,7 +18,7 @@ pipeline {
                 sh "if [ -d Portfolio ]; then rm -Rf Portfolio; fi"
                 sh "if [ -d Portfolio@tmp ]; then rm -Rf Portfolio@tmp; fi"
                 sh "if [ -d Portfolio_FrontEnd ]; then rm -Rf Portfolio_FrontEnd; fi"
-                sh "if [ -d Portfolio_BackEnd ]; then rm -Rf Portfolio_BackEnd; fi"
+                // sh "if [ -d Portfolio_BackEnd ]; then rm -Rf Portfolio_BackEnd; fi"
                
 
 
@@ -68,14 +68,11 @@ pipeline {
                 sh "if [ -d Portfolio_FrontEnd/Portfolio/src/main/resources/public ]; then rm -Rf Portfolio/src/main/resources/public; fi"
 
 
-                dir("Portfolio_FrontEnd/Portfolio") {
-                    sh "pwd"
-                    sh "ls"
+               
+                echo 'Copying angular App...'
 
-                     echo 'Copying angular App...'
-
-                    sh 'cp -R dist/portfolio /var/lib/jenkins/workspace/BackEnd_Pipeline/Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
-                }
+                sh 'cp -R Portfolio_FrontEnd/Portfolio/dist/portfolio Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
+                
 
 
                 dir("Portfolio_BackEnd") {
