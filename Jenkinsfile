@@ -79,7 +79,7 @@ pipeline {
                 sh "pwd"
                 sh "ls"
 
-                sh 'mv Portfolio_BackEnd/src/main/resources/portfolio/ Portfolio_BackEnd/src/main/resources/public'
+                sh 'mv Portfolio_BackEnd/src/main/resources/portfolio Portfolio_BackEnd/src/main/resources/public'
                 
              
                 
