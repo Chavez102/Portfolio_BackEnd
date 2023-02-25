@@ -75,12 +75,12 @@ pipeline {
                 
 
 
-                dir("Portfolio_BackEnd") {
-                    sh "pwd"
-                    sh "ls"
+                
+                sh "pwd"
+                sh "ls"
 
-                    sh 'mv Portfolio_BackEnd/src/main/resources/portfolio/ Portfolio_BackEnd/src/main/resources/public'
-                }
+                sh 'mv Portfolio_BackEnd/src/main/resources/portfolio/ Portfolio_BackEnd/src/main/resources/public'
+                
              
                 
             }
