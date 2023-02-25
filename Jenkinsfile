@@ -25,6 +25,7 @@ pipeline {
                     git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
                 }
             }
+        }
 
         stage('Building FrontEnd') {
             steps { 
