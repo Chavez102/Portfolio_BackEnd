@@ -65,10 +65,10 @@ pipeline {
                 sh "pwd"
                 sh "ls"
 
-                sh "if [ -d Portfolio/src/main/resources/public ]; then rm -Rf Portfolio/src/main/resources/public; fi"
+                sh "if [ -d Portfolio_FrontEnd/Portfolio/src/main/resources/public ]; then rm -Rf Portfolio/src/main/resources/public; fi"
 
 
-                dir("Portfolio") {
+                dir("Portfolio_FrontEnd/Portfolio") {
                     sh "pwd"
                     sh "ls"
 
