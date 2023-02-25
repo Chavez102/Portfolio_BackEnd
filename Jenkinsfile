@@ -32,9 +32,7 @@ pipeline {
                 sh "pwd" 
                 sh "ls" 
                 dir("Portfolio") {
-                    sh "pwd"
-                    
-
+                    sh "pwd" 
                     // sh "ls"
                     // sh 'npm cache clear --force'
                     sh "pwd"
@@ -43,13 +41,9 @@ pipeline {
                     nodejs('nodejs'){ 
                         sh 'npm install '
                     }
-                    
- 
+                     
+                    sh "pwd"
                     sh "ls"
-
-                    
-
-                    // sh 'npm update --verbose'
 
                     nodejs('nodejs'){
                          sh 'npm run build '
@@ -59,7 +53,7 @@ pipeline {
                     
                 }
  
-
+                
                 sh "pwd"
                 sh "ls"
 
@@ -69,6 +63,8 @@ pipeline {
                 dir("Portfolio") {
                     sh "pwd"
                     sh "ls"
+
+                     echo 'Copying angular App...'
 
                     sh 'cp -R dist/portfolio /var/lib/jenkins/workspace/BackEnd_Pipeline/Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
                 }
