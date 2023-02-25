@@ -39,7 +39,7 @@ pipeline {
                 echo 'After clonning FrontEnd...'
                 sh "pwd" 
                 sh "ls" 
-                dir("Portfolio") {
+                dir("Portfolio_FrontEnd/Portfolio") {
                     sh "pwd" 
                     // sh "ls"
                     // sh 'npm cache clear --force'
