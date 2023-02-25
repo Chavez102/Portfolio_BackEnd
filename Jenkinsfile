@@ -71,7 +71,7 @@ pipeline {
                
                 echo 'Copying angular App...'
 
-                sh 'cp -R Portfolio_FrontEnd/Portfolio/dist/portfolio Portfolio_BackEnd/Portfolio_BackEnd/src/main/resources'
+                sh 'cp -R Portfolio_FrontEnd/Portfolio/dist/portfolio Portfolio_BackEnd/src/main/resources'
                 
 
 
