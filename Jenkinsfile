@@ -40,16 +40,11 @@ pipeline {
 
                     sh "ls"
 
-                    nodejs('nodejs'){
-                        sh 'npm cache clear --force'
+                    nodejs('nodejs'){ 
                         sh 'npm install --verbose'
                     }
                     
-
-
-
-
-
+ 
                     sh "ls"
 
                     
@@ -57,37 +52,21 @@ pipeline {
                     // sh 'npm update --verbose'
 
                     nodejs('nodejs'){
-                         sh 'npm run build --verbose'
-                    }
+                         sh 'npm run build '
 
+                        // sh 'ng build --verbose --configuration production'
+                    } 
                     
-                    
-
-                    // sh 'ng build --verbose --configuration production'
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
+ 
 
                 sh "pwd"
                 sh "ls"
 
-                sh 'rm -r Portfolio_BackEnd/src/main/resources/public'
+                sh "if [ -d Portfolio/src/main/resources/public ]; then rm -Rf Portfolio/src/main/resources/public; fi"
 
-                dir("Portfolio_FrontEnd/Portfolio") {
+
+                dir("Portfolio") {
                     sh "pwd"
                     sh "ls"
 
