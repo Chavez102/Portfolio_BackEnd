@@ -54,9 +54,9 @@ pipeline {
                     sh "ls"
 
                     nodejs('nodejs'){
-                         sh 'npm run build '
+                        //  sh 'npm run build '
 
-                        // sh 'ng build --verbose --configuration production'
+                        sh 'npm run build --verbose --configuration production'
                     } 
                     
                 }
