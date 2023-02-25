@@ -18,6 +18,7 @@ pipeline {
                 sh "if [ -d Portfolio ]; then rm -Rf Portfolio; fi"
                 sh "if [ -d Portfolio@tmp ]; then rm -Rf Portfolio@tmp; fi"
                 sh "if [ -d Portfolio_FrontEnd ]; then rm -Rf Portfolio_FrontEnd; fi"
+                sh "if [ -d Portfolio_BackEnd ]; then rm -Rf Portfolio_BackEnd; fi"
                
 
 
@@ -25,7 +26,7 @@ pipeline {
                 echo 'Before Clonning...'
 
 
-                dir("Portfolio_BackEnd") {
+                dir("Portfolio_FrontEnd") {
                     
                     git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
                 }
