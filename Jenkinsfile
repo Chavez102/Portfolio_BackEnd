@@ -5,21 +5,17 @@ pipeline {
 
     stages {
         stage('Clone FrontEnd') {
-            steps {
-                
-               
+            steps { 
+
                 sh "pwd" 
                 sh "ls"  
 
                 sh "if [ -d Portfolio ]; then rm -Rf Portfolio; fi"
                 sh "if [ -d Portfolio@tmp ]; then rm -Rf Portfolio@tmp; fi"
                 sh "if [ -d Portfolio_FrontEnd ]; then rm -Rf Portfolio_FrontEnd; fi"
-                // sh "if [ -d Portfolio_BackEnd ]; then rm -Rf Portfolio_BackEnd; fi"
-               
+                // sh "if [ -d Portfolio_BackEnd ]; then rm -Rf Portfolio_BackEnd; fi" 
  
-                echo 'Before Clonning...'
-
-
+                echo 'Clonning...' 
                 dir("Portfolio_FrontEnd") {
                     
                     git branch: 'main', url: 'https://github.com/Chavez102/Portfolio_FrontEnd.git'
@@ -63,21 +59,18 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                
-                echo 'Building...'
-                
+            steps { 
+                echo 'Building...' 
                 dir("Portfolio_BackEnd") {
                     sh "pwd"
 
                     sh 'sh ./mvnw clean package -DskipTests'
-                }
-                
+                } 
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..' 
+                echo 'NOT Testing..' 
             }
         }
         stage('Deploy') {
