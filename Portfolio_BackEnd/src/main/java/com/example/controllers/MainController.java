@@ -42,16 +42,20 @@ public class MainController {
 	public ResponseEntity<Response> email(@RequestBody MailMessage message ) throws MessagingException, IOException{ 
 			
 			Response myresponse=new Response("ACCEPTING CHANGES FROM BACK"); 
-			System.out.println("Trying to send email");		
 			
-			String from =message.getEmail();
+			
+			String to ="bryanchavez102@gmail.com";
  
 			 
-			email= new Email(from,message);
+			email= new Email(to,message);
 			
 			email.sendEmail(); 
 			
+			System.out.println("Email Sent");	
+			
 			return ResponseEntity.ok(myresponse);
+			
+				
 		}
 
 
